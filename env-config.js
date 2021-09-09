@@ -1,5 +1,5 @@
 const prod = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  'process.env.BACKEND_URL': prod ? '/teaching' : '',
+  'process.env.BACKEND_URL': prod ? '/artificial_intelligence' : '',
 }
