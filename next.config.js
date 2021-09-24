@@ -4,6 +4,12 @@
 
 const debug = process.env.NODE_ENV !== 'production'
 
-module.exports = {
-  assetPrefix: !debug ? '/artificial_intelligence/' : '',
-}
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+})
+
+module.exports = withMDX({
+  pageExtensions: ['js', 'jsx', 'mdx'],
+})
+
+module.exports.assetPrefix = !debug ? '/artificial_intelligence/' : '';
